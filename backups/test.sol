@@ -1,17 +1,9 @@
-pragma solidity ^0.8.4;
+pragma solitidy ^0.8.0;
 
-// ERC721
-interface ERC721 {
-
-    // Token name
-    string private _name;
-
-    // Token symbol
-    string private _symbol;
-
-
+contract ERC721 {
     // Required methods
-    function balanceOf(address _owner) external view returns (uint256 balance);
+    function totalSupply() public view returns (uint256 total);
+    function balanceOf(address _owner) public view returns (uint256 balance);
     function ownerOf(uint256 _tokenId) external view returns (address owner);
     function approve(address _to, uint256 _tokenId) external;
     function transfer(address _to, uint256 _tokenId) external;
@@ -31,20 +23,9 @@ interface ERC721 {
     function supportsInterface(bytes4 _interfaceID) external view returns (bool);
 }
 
-struct Guarantee {
-    // One and only genetic information.
-    uint256 genes;
-
-    // Created timestamp.
-    uint32 createdTime;
-
-    // Information about what is guaranteed. This will include the serial number, warranty expiration date.
-    bytes32 guaranteed;
-
-     
-}
-
-contract GuaranteeToken is ERC721 {
-    constructor() ERC721("GuaranteeToken", "GTK") { }
-    
+contract GuaranteeBase {
+    struct Guarantee {
+        uint32 createdTime;
+        bytes32 guaranteed;
+    }
 }

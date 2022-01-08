@@ -1,0 +1,23 @@
+{
+  "name": "guarantee-token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taewan-P/guarantee-token.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taewan-P/guarantee-token/issues"
+  },
+  "homepage": "https://github.com/Taewan-P/guarantee-token#readme"
+}
