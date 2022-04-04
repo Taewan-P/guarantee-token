@@ -22,6 +22,10 @@ contract GuaranteeToken is ERC721, ERC721Enumerable, AccessControl {
         _safeMint(to, tokenId);
     }
 
+    function getMaxTokenID() public view returns (uint256) {
+        return _tokenIdCounter.current();
+    }
+
     // The following functions are overrides required by Solidity.
 
     function _beforeTokenTransfer(address from, address to, uint256 tokenId)
