@@ -54,6 +54,7 @@ module.exports = {
      network_id: "*",       // Any network (default: none)
      from: truffle_account,
      gas: 4700000,
+     gasPrice: "0",
     },
     // Another network with more advanced options...
     // advanced: {
